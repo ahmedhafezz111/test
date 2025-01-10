@@ -1,0 +1,25 @@
+<section class="product bg-light py-3">
+    <div class="container ">
+        <h1>Products Component</h1>
+        <div class="row">
+            @for (product of productList; track product.id) {
+                <div class="col-md-3 g-4">
+                    <div class="card">
+                        <img class="card-img-top" [src]="product.imageCover" alt="Title" />
+                        <div class="card-body">
+                            <h4 class="card-title">Title:{{product.title}}</h4>
+                            <p class="card-text">Description:{{product.description}}</p>
+                            <!-- <p class="card-text">Quantity:{{product.quantity}}</p>
+                            <p class="card-text">OnSale:{{product.onSale}}</p> -->
+                        </div>
+                    </div>
+                    
+                </div>
+            }
+      
+        </div>
+    </div>
+   <!-- <h2 class="text-center d-inline text-light bg-dark rounded-3 py-3 mt-4">product recommendations</h2> -->
+   <app-recommend></app-recommend>
+
+</section>
