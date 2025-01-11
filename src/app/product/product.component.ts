@@ -18,6 +18,7 @@ interface IProduct{
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
+    role:string = "admin";
   productList:IProduct[]=[
     {
         "id": "1",

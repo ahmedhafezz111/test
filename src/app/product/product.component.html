@@ -19,7 +19,24 @@
       
         </div>
     </div>
-   <!-- <h2 class="text-center d-inline text-light bg-dark rounded-3 py-3 mt-4">product recommendations</h2> -->
-   <app-recommend></app-recommend>
+    <!-- default on idle 
+     on interaction
+     on hover
+     on viewport
+     on timer
+     -->
+     <button class="btn btn-danger text-light" #myBtn>Show</button>
+
+   @defer ( on interaction(myBtn)) {
+
+    <app-recommend></app-recommend>
+
+   }@placeholder {
+    <h2>placeholder</h2>
+   }@loading {
+    <h2>loading...</h2>
+   }@error {
+    <h2>err</h2>
+   }
 
 </section>
